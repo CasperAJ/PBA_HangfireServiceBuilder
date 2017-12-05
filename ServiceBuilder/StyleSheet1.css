@@ -1,0 +1,35 @@
+﻿body {
+}
+
+
+.columnStick {
+    width:190px;
+    height:590px;
+    max-height:990px;
+    float:left;
+    margin-left:10px;
+    border: solid 1px black;
+    padding:5px;
+}
+
+.columnLabel {
+    display: inline-block;
+    width: 190px;
+    height:30px;
+    border: solid 1px black;
+    text-align:center;
+    line-height:30px;
+    float:left;
+    margin-bottom:20px;
+}
+
+.serviceModuleContainer {
+    display: inline-block;
+    width: 190px;
+    height:25px;
+    border: solid 1px black;
+    text-align:center;
+    line-height:25px;
+    float:left;
+    margin-bottom:5px;
+}
