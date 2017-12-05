@@ -22,58 +22,22 @@ namespace ServiceBuilder {
         protected global::System.Web.UI.WebControls.Label Label_ModuleList;
         
         /// <summary>
-        /// CreateServer control.
+        /// ModuleList_AvalibleModule1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label CreateServer;
+        protected global::System.Web.UI.WebControls.Label ModuleList_AvalibleModule1;
         
         /// <summary>
-        /// Label1 control.
+        /// ModuleList_AvalibleModule2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
-        
-        /// <summary>
-        /// Label2 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label2;
-        
-        /// <summary>
-        /// Label3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label3;
-        
-        /// <summary>
-        /// Label4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label4;
-        
-        /// <summary>
-        /// Label5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label5;
+        protected global::System.Web.UI.WebControls.Label ModuleList_AvalibleModule2;
         
         /// <summary>
         /// Label_NewService control.
@@ -85,6 +49,33 @@ namespace ServiceBuilder {
         protected global::System.Web.UI.WebControls.Label Label_NewService;
         
         /// <summary>
+        /// NewService_ServiceStart control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NewService_ServiceStart;
+        
+        /// <summary>
+        /// NewService_ServiceModule control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NewService_ServiceModule;
+        
+        /// <summary>
+        /// NewService_ServiceSlut control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label NewService_ServiceSlut;
+        
+        /// <summary>
         /// Label_ServiceModule control.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,60 @@ namespace ServiceBuilder {
         protected global::System.Web.UI.WebControls.Label Label_ServiceModule;
         
         /// <summary>
+        /// ServiceModule_CreatedAt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceModule_CreatedAt;
+        
+        /// <summary>
+        /// ServiceModule_createdBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceModule_createdBy;
+        
+        /// <summary>
+        /// ServiceModule_Version control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceModule_Version;
+        
+        /// <summary>
+        /// ServiceModule_Paramater1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceModule_Paramater1;
+        
+        /// <summary>
+        /// ServiceModule_Paramater2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceModule_Paramater2;
+        
+        /// <summary>
+        /// ServiceModule_ExecutionDelay control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceModule_ExecutionDelay;
+        
+        /// <summary>
         /// Label_ServiceInfo control.
         /// </summary>
         /// <remarks>
@@ -101,5 +146,68 @@ namespace ServiceBuilder {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label Label_ServiceInfo;
+        
+        /// <summary>
+        /// NewService_DoS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea NewService_DoS;
+        
+        /// <summary>
+        /// ServiceInfo_ModuleCount control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceInfo_ModuleCount;
+        
+        /// <summary>
+        /// ServiceInfo_ESTET control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceInfo_ESTET;
+        
+        /// <summary>
+        /// ServiceInfo_CreatedAt control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceInfo_CreatedAt;
+        
+        /// <summary>
+        /// ServiceInfo_CeatedBy control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceInfo_CeatedBy;
+        
+        /// <summary>
+        /// ServiceInfo_Version control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label ServiceInfo_Version;
+        
+        /// <summary>
+        /// ServiceInfo_DoS control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlTextArea ServiceInfo_DoS;
     }
 }
