@@ -3,7 +3,7 @@
 
 
 .columnStick {
-    width:190px;
+    width:202px;
     height:590px;
     max-height:990px;
     float:left;
@@ -50,3 +50,8 @@ textarea { resize: vertical; }
     float:left;
     margin-bottom:10px;
 }   
+
+.textarea {
+    height:auto; 
+    padding:10px 0px 10px 0px;
+}

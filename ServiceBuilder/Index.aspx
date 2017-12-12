@@ -2,6 +2,8 @@
 
 <!DOCTYPE html>
 
+<asp:GridView ID="GridView1" runat="server"></asp:GridView>
+
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <link href="StyleSheet1.css" rel="stylesheet" />
@@ -35,6 +37,7 @@
 
                 <!- Dynamick listing from here !>
                 <div class="serviceModuleContainer" onclick="">
+                    
                     <asp:Label ID="NewService_ServiceModule" runat="server" Text="Install software" CssClass="columnLabel"></asp:Label>
                 </div>
 
