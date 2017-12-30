@@ -157,13 +157,13 @@ namespace ServiceBuilder {
         protected global::System.Web.UI.WebControls.Label Label_ServiceInfo;
         
         /// <summary>
-        /// NewService_DoS control.
+        /// ServiceInfo_ServiceName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea NewService_DoS;
+        protected global::System.Web.UI.HtmlControls.HtmlInputText ServiceInfo_ServiceName;
         
         /// <summary>
         /// ServiceInfo_ModuleCount control.
@@ -218,5 +218,14 @@ namespace ServiceBuilder {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea ServiceInfo_DoS;
+        
+        /// <summary>
+        /// save_service control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button save_service;
     }
 }

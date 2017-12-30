@@ -44,7 +44,7 @@
             <asp:Label ID="Label_NewService" runat="server" Text="New service" CssClass="infoColumnLabel"></asp:Label>
             
 
-            <div class="serviceModuleContainer" onclick="">
+            <div class="serviceModuleContainer">
                 <asp:Label ID="NewService_ServiceStart" runat="server" Text="Start" CssClass="columnLabel"></asp:Label>
             </div>
 
@@ -69,7 +69,7 @@
             </asp:ListView>
 
             <!- End dynamick listing !>
-            <div class="serviceModuleContainer" onclick="">
+            <div class="serviceModuleContainer">
                 <asp:Label ID="NewService_ServiceSlut" runat="server" Text="Slut" CssClass="columnLabel"></asp:Label>
             </div>
         </div>
@@ -127,7 +127,7 @@
 
             <!- End dynamick listing !>
 
-                <div class="serviceModuleContainer" onclick="" style="margin-top:20px;"">
+                <div class="serviceModuleContainer"   style="margin-top:20px;"">
                 <asp:Label ID="ServiceModule_ExecutionDelay" runat="server" Text="Execution delay: " CssClass="columnLabel"></asp:Label>
             </div>
             
@@ -139,26 +139,25 @@
         <div id="ServiceInfo" class="columnStick">
             <asp:Label ID="Label_ServiceInfo" runat="server" Text="Service info" CssClass="infoColumnLabel"></asp:Label>
             
-            <div class="serviceModuleContainer textarea"  onclick="">
-                <textarea style="overflow:hidden" id="NewService_DoS" runat="server" cols="20" rows="4" maxlength="50" placeholder="Service name"></textarea>
+            <div class="serviceModuleContainer textarea">
+                <input id="ServiceInfo_ServiceName" runat="server" placeholder="Service name" type="text" />
             </div>
-
-                <div class="serviceModuleContainer" onclick="">
+            <div class="serviceModuleContainer">
                 <asp:Label ID="ServiceInfo_ModuleCount" runat="server" Text="Module count: " CssClass="columnLabel"></asp:Label>
             </div>
-                <div class="serviceModuleContainer" onclick="">
+                <div class="serviceModuleContainer">
                 <asp:Label ID="ServiceInfo_ESTET" runat="server" Text="EST execution time:  " CssClass="columnLabel"></asp:Label>
             </div>
-                <div class="serviceModuleContainer" onclick="">
+                <div class="serviceModuleContainer">
                 <asp:Label ID="ServiceInfo_CreatedAt" runat="server" Text="Created at: " CssClass="columnLabel"></asp:Label>
             </div>
-                <div class="serviceModuleContainer" onclick="">
+                <div class="serviceModuleContainer">
                 <asp:Label ID="ServiceInfo_CeatedBy" runat="server" Text="Created by:<br>Søren Borring Sørensen<br>ID-G53502" CssClass="columnLabel"></asp:Label>
             </div>
-            <div class="serviceModuleContainer" onclick="">
+            <div class="serviceModuleContainer">
                 <asp:Label ID="ServiceInfo_Version" runat="server" Text="Version at: 1.0" CssClass="columnLabel"></asp:Label>
             </div>
-            <div class="serviceModuleContainer textarea" onclick="">
+            <div class="serviceModuleContainer textarea">
                 <textarea style="overflow:hidden" id="ServiceInfo_DoS" runat="server" cols="20" rows="4" maxlength="50" placeholder="Description of service"></textarea>
             </div>
 
@@ -166,6 +165,9 @@
  <!------------------- END COLUMN ----- SERVICE INFO #4 ------------------->
 
 
+ <!------------------- New BUTTON ----- SAVE SERVICE ------------------->
+
+            <asp:Button ID="save_service" runat="server" Text="Button" OnClick="save_service_Click"/>
     </div>
 
 </asp:Content>

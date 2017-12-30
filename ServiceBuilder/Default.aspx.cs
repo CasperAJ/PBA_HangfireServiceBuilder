@@ -13,12 +13,15 @@ namespace ServiceBuilder
 {
     public partial class _Default : Page
     {
+        ArrayList moduleList = new ArrayList();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ArrayList moduleList = new ArrayList();
+            
 
             if (Session["moduleCount"] == null)
             { Session["moduleCount"] = 0; }
+            ServiceInfo_ModuleCount.Text = "Module count: "+Session["moduleCount"].ToString();
+
             var moduleCountSession = Session["moduleCount"];
             int moduleCount = Int32.Parse(moduleCountSession.ToString());
 
@@ -50,6 +53,7 @@ namespace ServiceBuilder
                 }
             }
 
+
             if (moduleCountSession != null)
             {
                 foreach (string key in HttpContext.Current.Session.Keys)
@@ -60,8 +64,7 @@ namespace ServiceBuilder
 
             //List<string> moduleList = new List<string>();
 
-
-            using (MySqlConnection con = new MySqlConnection(""))
+            using (MySqlConnection con = new MySqlConnection(sqlUsing))
             {
                 using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM ServiceModule"))
                 {
@@ -125,10 +128,6 @@ namespace ServiceBuilder
                                     ServiceModule_createdBy.Text = row["CreatedBy"].ToString();
                                     ServiceModule_Version.Text = row["version"].ToString();
                                 }
-                                //dt.Columns.Remove("ScriptName");
-
-                                //Label_ServiceModulename1.Text = dt.["Name"].ToString();
-
                                 //ServiceModuleView.DataSource = dt;
                                 //ServiceModuleView.DataBind();
 
@@ -137,6 +136,62 @@ namespace ServiceBuilder
                             }
                         }
                     }
+                }
+            }
+        }
+
+        protected void save_service_Click(object sender, EventArgs e)
+        {
+            // When the button is clicked,
+            // change the button text, and disable it.
+
+            string ServiceName = ServiceInfo_ServiceName.Value;
+            string ServiceDoS = ServiceInfo_DoS.InnerText;
+
+            if (string.IsNullOrEmpty(ServiceName)||string.IsNullOrEmpty(ServiceDoS))
+            {
+                Response.Write("<script>alert('Service name or service Description is empty');</script>");
+            }
+            else
+            {
+                string insertParentService = "Insert into ParentService (Name, Description) values ('" + ServiceName + "','" + ServiceDoS + "')";
+                // Retunere "empty - no new inserts"
+                String GetLastParentServiceID = "SELECT LAST_INSERT_ID()";
+
+                //string GetLastParentServiceID = "select * from ParentService where Name ='"+ServiceName+"' AND Description ='"+ ServiceDoS+"'";
+
+
+                using (MySqlConnection con = new MySqlConnection(sqlUsing))
+                {
+                    con.Open();
+                    MySqlCommand insert = new MySqlCommand(insertParentService, con);
+                    insert.ExecuteNonQuery();
+                    MySqlCommand read = new MySqlCommand(GetLastParentServiceID, con);
+                    string Getid = read.ExecuteScalar().ToString();
+                    //string lastID = Getid.Read().ToString();
+                    //moduleListToQuery.Contains(moduleID.ToString())
+
+                    String insertChildServices = "Insert into ChildService (FK_ParentServiceId, FK_ServiceModuleId) Values ";
+                    int count = 0;
+                    foreach (var ModuleID in moduleList)
+                    {
+                        if (count > 0) insertChildServices += ",";
+                        insertChildServices += "('" + Getid + "','" + moduleList[count] + "')";
+                        count++;
+                    }
+
+
+                    MySqlCommand insertChild = new MySqlCommand(insertChildServices, con);
+                    insertChild.ExecuteNonQuery();
+                }
+
+
+                // Display the service has been saved text.
+                if (true == false)
+                {
+                    Response.Write("<script>alert('Your service has been saved');</script>");
+                    Session.Clear();
+                    Response.Redirect(Request.Url.GetLeftPart(UriPartial.Path));
                 }
             }
         }
